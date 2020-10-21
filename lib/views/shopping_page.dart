@@ -84,14 +84,20 @@ class ShoppingPage extends StatelessWidget {
                       });
                 }),
               ),
-              GetX<CartController>(
-                  builder: (controller) {
-                    return Text(
-                      "Total : \$ ${controller.totalPrice}",
-                      style: TextStyle(color: Colors.white, fontSize: 18.0),
-                    );
-                  }
-              ),
+            //   GetX<CartController>(
+            //      builder: (controller) {
+            //         return Text(
+            //          "Total : \$ ${controller.totalPrice}",
+            //           style: TextStyle(color: Colors.white, fontSize: 18.0),
+            //         );
+            //      }
+            // ),
+              Obx((){
+                return Text(
+                  "Total : \$ ${cartController.totalPrice}",
+                  style: TextStyle(color: Colors.white, fontSize: 18.0),
+                );
+              }),
               SizedBox(
                 height: 100.06,
               )
